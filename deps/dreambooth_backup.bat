@@ -25,7 +25,7 @@ exit /b
 
 
 :begin
-call conda activate diffusers
+call conda activate dreambooth-sd-xformers
 
 
 echo 1) New model
