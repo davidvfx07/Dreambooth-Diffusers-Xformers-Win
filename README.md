@@ -4,7 +4,7 @@ A Windows compatible fork of ShivamShrirao/diffusers Dreambooth Xformers example
 # Note from maintainer
 I am not actively developing nor maintaining this project. While I may be active on some issues, my presence shouldn't be relied upon as I am moving on to other projects. Issues however are open for peer to peer support. Inactive issues are marked stale after 60 days and closed after 7 more.
 
-## Conda installation
+# Conda installation
 Open anaconda prompt and create env
 ```cmd
 conda create -n dreambooth-sd-xformers python=3.8
@@ -62,7 +62,7 @@ accelerate config
 Train and convert using `dreambooth.bat`
 
 ---
-## Workflow Example
+# Workflow Example
 Download any Stable Diffusion model to work off of (ie. [stable-diffusion-v-1-4-original](https://huggingface.co/CompVis/stable-diffusion-v-1-4-original)), convert to diffuser with batch script, and place into `models` folder.
 Place input images into `data/NAME/images`.
 Generate class images and train with batch script. (optionally, when satisfied, convert model to SD/ckpt for use with [AUTOMATIC1111's webui](https://github.com/AUTOMATIC1111/stable-diffusion-webui) and the such.
