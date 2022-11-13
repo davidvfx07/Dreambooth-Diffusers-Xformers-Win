@@ -1,6 +1,9 @@
 # Dreambooth-SD-Xformers-Win
 A Windows compatible fork of ShivamShrirao/diffusers Dreambooth Xformers example with prebuilt dependencies and additional tools for ease of use.
 
+# Note from maintainer
+I am not actively developing nor maintaining this project. While I may be active on some issues, my presence shouldn't be relied upon as I am moving on to other projects. Issues however are open for peer to peer support. Inactive issues are marked stale after 60 days and closed after 7 more.
+
 ## Conda installation
 Open anaconda prompt and create env
 ```cmd
