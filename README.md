@@ -4,8 +4,8 @@ A Windows compatible fork of ShivamShrirao/diffusers Dreambooth Xformers example
 ## Conda installation
 Open anaconda prompt and create env
 ```cmd
-conda create -n diffusers python=3.8
-conda activate diffusers
+conda create -n dreambooth-sd-xformers python=3.8
+conda activate dreambooth-sd-xformers
 ```
 
 Install requirements
