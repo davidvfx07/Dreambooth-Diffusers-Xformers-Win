@@ -18,9 +18,9 @@ pip install -r requirements.txt
 
 ---
 
-Copy `deps/bitsandbytes-win-prebuilt/*` to `C:\Users\USER\.conda\envs\ENV_NAME\Lib\site-packages\bitsandbytes` so that the .dll are among the .so
+Copy `deps/bitsandbytes-win-prebuilt/*` to `C:\Users\USER\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes` so that the .dll are among the .so
 
-Browse to `C:\Users\USER\.conda\envs\ENV_NAME\Lib\site-packages\bitsandbytes`
+Browse to `C:\Users\USER\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes`
 
 In `cextension.py` `~line 91`:
 
