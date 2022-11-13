@@ -72,8 +72,8 @@ exit
 
 
 :convert-diff
-set /p in_path=Model path (eg. data/cutedog/model/1000): 
-set /p out_path=Ckpt path (eg. data/cutedog/model/1000/model.ckpt): 
+set /p in_path=Model path (eg. data/sks/model/1000): 
+set /p out_path=Ckpt path (eg. data/sks/model/1000/model.ckpt): 
 echo.
 
 python convert_diff_to_sd.py --model_path "%in_path%" --checkpoint_path "%out_path%" --half
@@ -81,10 +81,10 @@ python convert_diff_to_sd.py --model_path "%in_path%" --checkpoint_path "%out_pa
 exit /b
 
 :convert-sd
-set /p in_path=Ckpt path (eg. data/sd-v1-4.ckpt): 
-set /p out_path=Model path (eg. data/converted_sd-v1-4): 
+set /p in_path=Ckpt path (eg. models/sd-v1-4.ckpt): 
+set /p out_path=Model path (eg. models/sd-v1-4): 
 echo.
-choice /c yn /n /m "Extract EMA? "
+choice /c yn /n /m "Extract EMA (N)? "
 echo.
 if %errorlevel% equ 2 set ema=
 if %errorlevel% equ 1 set ema=--extract_ema
@@ -115,7 +115,13 @@ exit
 for /f "delims=" %%i in ('python -c "exec('''\nimport os\nfor i in range(len(next(os.walk('models'))[1])): print(i+1, end='')\n''')"') do set model_choices=%%i
 
 echo.
+if not defined model_choices (
+echo No SD models found.
+pause
+exit
+)
 echo.
+
 echo Choose model
 echo.
 python -c "exec('''\nimport os\nfor i, x in enumerate(next(os.walk('models'))[1]): print(f'{i+1}) {x}')\n''')"
@@ -140,7 +146,7 @@ exit /b
 
 :name_prompt
 echo.
-set /p name=Name (eg. cutedog): 
+set /p name=Name (eg. sks): 
 
 exit /b
 
@@ -149,7 +155,7 @@ call :model_select
 call :set_prefs
 echo.
 call :name_prompt
-set /p instance_prompt=Prompt (eg. a photo of cutedog dog): 
+set /p instance_prompt=Prompt (eg. a photo of sks dog): 
 set /p class_prompt=Class prompt (eg. a photo of dog): 
 
 exit /b

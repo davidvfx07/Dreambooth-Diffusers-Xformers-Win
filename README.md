@@ -18,9 +18,9 @@ pip install -r requirements.txt
 
 ---
 
-Copy `deps/bitsandbytes-win-prebuilt/*` to `C:\Users\USER\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes` so that the .dll are among the .so
+Copy `deps/bitsandbytes-win-prebuilt/*` to `C:\Users\%username%\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes` so that the .dll are among the .so
 
-Browse to `C:\Users\USER\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes`
+Browse to `C:\Users\%username%\.conda\envs\dreambooth-sd-xformers\Lib\site-packages\bitsandbytes`
 
 In `cextension.py` `~line 91`:
 
@@ -249,3 +249,4 @@ accelerate launch train_dreambooth.py^
 - Dreambooth Xformers - https://github.com/ShivamShrirao/diffusers/tree/main/examples/dreambooth
 - Bitsandbytes Prebuilt DLLs - https://github.com/DeXtmL/bitsandbytes-win-prebuilt
 - Convert Diffusers to SD https://gist.github.com/jachiam/8a5c0b607e38fcc585168b90c686eb05
+- SKS example images https://unsplash.com/@alvannee
