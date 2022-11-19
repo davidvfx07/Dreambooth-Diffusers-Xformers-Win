@@ -1,4 +1,4 @@
-# Dreambooth-SD-Xformers-Win
+# Dreambooth-Diffusers-Xformers-Win
 A Windows compatible fork of ShivamShrirao/diffusers Dreambooth Xformers example with prebuilt dependencies and additional tools for ease of use.
 
 # Note from maintainer
